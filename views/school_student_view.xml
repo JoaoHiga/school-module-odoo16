@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Vista de formulario para school.student -->
+    <record id="school_student_view" model="ir.ui.view">
+        <field name="name">school.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form string="Datos de Estudiantes">
+                <header>
+                    <h1>Datos de Estudiantes</h1>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="nationality"/>
+                        <field name="gender"/>
+                        <field name="grade_level"/>
+                        <field name="birth_date"/>
+                        <field name="age"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="addres"/>
+                        <field name="final_exam_grade"/>
+                        <field name="subjects_ids"/>
+                        <field name="enrollment_date"/>
+                        <field name="years_enrolled"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para school.student -->
+    <record id="school_student_action" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">form</field>
+        <!-- <field name="view_id" ref="school_student_view"/> -->
+    </record>
+</odoo>

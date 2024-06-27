@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <!-- Menú Principal -->
+        <menuitem id="school_menu_root" name="Sistema Colegio" web_icon="school,static/description/icon.png"/>
+
+        <!-- Sub Menús -->
+        <menuitem id="school_subject_menu_act" name="Cursos" parent="school_menu_root" action="school_subject_action" sequence="1"/>
+        <menuitem id="school_teacher_menu_act" name="Profesores" parent="school_menu_root" action="school_teacher_action" sequence="2"/>
+        <menuitem id="school_student_menu_act" name="Estudiantes" parent="school_menu_root" action="school_student_action" sequence="3"/>
+    </data>
+</odoo>

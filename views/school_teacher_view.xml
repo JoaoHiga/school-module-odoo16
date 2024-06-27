@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Vista de formulario para school.teacher -->
+    <record id="school_teacher_view" model="ir.ui.view">
+        <field name="name">school.teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Datos de Profesores">
+                <header>
+                    <h1>Datos de Profesores</h1>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="gender"/>
+                        <field name="age"/>
+                        <field name="birth_date"/>
+                        <field name="nationality"/>
+                        <field name="profile"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="addres"/>
+                        <field name="specialization"/>
+                        <field name="hire_date"/>
+                        <field name="years_of_service"/>
+                        <field name="subjects_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para school.teacher -->
+    <record id="school_teacher_action" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">form</field>
+        <!-- <field name="view_id" ref="school_teacher_view"/> -->
+    </record>
+</odoo>
